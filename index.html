@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Captcha Verification</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <meta name="author" content="Kamran Javed">
+    <meta name="copyright" content="OneDigitalLine.com">
+</head>
+
+<body>
+    <div class="container">
+        <header>Secure Captcha Verification</header>
+        <div class="captcha-difficulty">
+            <div class="difficulty-option active" data-difficulty="normal">Normal</div>
+            <div class="difficulty-option" data-difficulty="hard">Hard</div>
+            <div class="difficulty-option" data-difficulty="extreme">Extreme</div>
+        </div>
+        <div class="input_field captch_box">
+            <input type="text" value="" disabled aria-label="Generated CAPTCHA" />
+            <button class="refresh_button" aria-label="Refresh CAPTCHA">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+        </div>
+        <div class="input_field captch_input">
+            <input type="text" placeholder="Enter captcha" aria-label="Enter CAPTCHA" />
+        </div>
+        <div class="strength-meter">
+            <div class="strength-meter-fill"></div>
+        </div>
+        <div class="message">Entered captcha is correct</div>
+        <div class="attempts-counter">Attempts remaining: <span id="attempts">3</span></div>
+        <div class="input_field button disabled">
+            <button>Verify Captcha</button>
+        </div>
+        <div style="text-align: center; margin-top: 25px; font-size: 14px; color: #888;">
+            © <a href="https://onedigitalline.com" target="_blank"
+                style="color: #6c5ce7; text-decoration: none;">OneDigitalLine.com</a><br>
+            Made by Kamran Javed
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
