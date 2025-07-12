@@ -1,4 +1,3 @@
-// DOM elements
 const captchaTextBox = document.querySelector(".captch_box input");
 const refreshButton = document.querySelector(".refresh_button");
 const captchaInputBox = document.querySelector(".captch_input input");
@@ -9,12 +8,10 @@ const strengthMeterFill = document.querySelector(".strength-meter-fill");
 const difficultyOptions = document.querySelectorAll(".difficulty-option");
 const attemptsCounter = document.getElementById("attempts");
 
-// Variables
 let captchaText = null;
 let difficulty = "normal";
 let attempts = 3;
 
-// Character sets for different difficulty levels
 const charSets = {
   normal: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
   hard: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*",
@@ -22,7 +19,6 @@ const charSets = {
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?",
 };
 
-// Generate random string based on difficulty
 const generateRandomString = (length, charset) => {
   let result = "";
   for (let i = 0; i < length; i++) {
@@ -31,7 +27,6 @@ const generateRandomString = (length, charset) => {
   return result;
 };
 
-// Generate captcha based on difficulty
 const generateCaptcha = () => {
   let length, charset;
 
@@ -52,7 +47,6 @@ const generateCaptcha = () => {
   const randomString = generateRandomString(length, charset);
   const randomStringArray = randomString.split("");
 
-  // Randomly transform some characters
   const changeString = randomStringArray.map((char) =>
     Math.random() > 0.5
       ? Math.random() > 0.5
@@ -61,17 +55,13 @@ const generateCaptcha = () => {
       : char
   );
 
-  // Add random spacing between characters
   captchaText = changeString.join(
     " ".repeat(Math.floor(Math.random() * 3) + 1)
   );
   captchaTextBox.value = captchaText;
 
-  // Update strength meter
   updateStrengthMeter();
 };
-
-// Update strength meter based on difficulty
 const updateStrengthMeter = () => {
   let width, color;
 
@@ -93,7 +83,6 @@ const updateStrengthMeter = () => {
   strengthMeterFill.style.backgroundColor = color;
 };
 
-// Refresh button click handler
 const refreshBtnClick = () => {
   generateCaptcha();
   captchaInputBox.value = "";
@@ -101,7 +90,6 @@ const refreshBtnClick = () => {
   captchaInputBox.focus();
 };
 
-// Validate captcha input
 const captchaKeyUpValidate = () => {
   submitButton.classList.toggle("disabled", !captchaInputBox.value);
 
@@ -113,9 +101,7 @@ const captchaKeyUpValidate = () => {
   }
 };
 
-// Submit button click handler
 const submitBtnClick = () => {
-  // Normalize the captcha text (remove spaces and make case insensitive if needed)
   const normalizedCaptcha = captchaText
     .split("")
     .filter((char) => char !== " ")
@@ -125,7 +111,6 @@ const submitBtnClick = () => {
 
   message.classList.add("active");
 
-  // Check if the entered captcha text is correct
   if (userInput === normalizedCaptcha) {
     message.textContent = "Verification successful!";
     message.className = "message active success";
@@ -153,7 +138,6 @@ const submitBtnClick = () => {
   }
 };
 
-// Set difficulty level
 const setDifficulty = (level) => {
   difficulty = level;
   difficultyOptions.forEach((option) => {
@@ -162,7 +146,6 @@ const setDifficulty = (level) => {
   generateCaptcha();
 };
 
-// Event listeners
 refreshButton.addEventListener("click", refreshBtnClick);
 captchaInputBox.addEventListener("keyup", captchaKeyUpValidate);
 captchaInputBox.addEventListener("focus", () =>
@@ -180,6 +163,14 @@ difficultyOptions.forEach((option) => {
   );
 });
 
-// Initialize
 generateCaptcha();
 setDifficulty("normal");
+
+// Project: Secure Captcha Verification
+// Author: Kamran Javed
+// Portfolio: https://kamranjaved.com
+// Company: OneDigitalLine
+// Website: https://onedigitalline.com
+// Email: meet@kamranjaved.com
+// License: For personal or client use only. Redistribution prohibited.
+// © Kamran Javed. All rights reserved.
