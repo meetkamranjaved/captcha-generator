@@ -11,7 +11,7 @@ A secure and modern CAPTCHA verification interface built with HTML, CSS, and Jav
 ---
 
 ## 🚀 Demo
-[Live Demo](https://projects.kamranjaved.com/captcha-generator)
+[Live Demo](https://projects.kamranjaved.com/mini-projects/captcha-generator)
 
 ---
 
