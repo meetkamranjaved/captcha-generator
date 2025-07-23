@@ -12,11 +12,11 @@ License: For personal or client use only. Redistribution prohibited.
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 :root {
-  --primary-color: #6c5ce7;
-  --secondary-color: #a29bfe;
+  --primary-color: #1f4b99;
+  --secondary-color: #1c1c1e;
   --success-color: #00b894;
   --error-color: #d63031;
-  --text-color: #2d3436;
+  --text-color: #121212;
   --light-gray: #dfe6e9;
   --white: #ffffff;
   --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -35,7 +35,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  background: linear-gradient(135deg, #1f4b99, #00d1b2);
   padding: 20px;
 }
 
