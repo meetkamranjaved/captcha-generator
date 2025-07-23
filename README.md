@@ -1,11 +1,12 @@
 # Secure Captcha Generator
+A professional, mobile-responsive captcha UI for user validation | [OneDigitalLine.com](https://onedigitalline.com)
 
-A modern, secure, and customizable CAPTCHA generator with multiple difficulty levels and enhanced security features.
+A secure and modern CAPTCHA verification interface built with HTML, CSS, and JavaScript. Fully responsive, clean UI and easy to integrate into any web project requiring bot protection.
 
 ---
 
 ## 📸 Screenshot
-![image](https://github.com/user-attachments/assets/275cb6d8-a60c-4e08-b995-741ed212dc84)
+![image](https://github.com/user-attachments/assets/dd51cf43-077d-4b9c-a118-0add02f38a7b)
 
 ---
 
@@ -30,6 +31,15 @@ A modern, secure, and customizable CAPTCHA generator with multiple difficulty le
 - JavaScript (ES6)
 - Font Awesome Icons
 - Google Fonts (Poppins)
+
+---
+
+## 💡 Best For
+- Login forms
+- Contact pages
+- Admin panels
+- SaaS user flows
+- Personal or client web apps
 
 ---
 
